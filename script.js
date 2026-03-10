@@ -1,22 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const lotteryGrid = document.getElementById('lotteryGrid');
-    const categoryLinks = document.querySelectorAll('.category-list a');
+    // සයිට් එකේ ටිකට් පේන තැන හරියටම අල්ලගන්නවා
+    const lotteryGrid = document.querySelector('.lottery-grid') || document.getElementById('lotteryGrid') || document.querySelector('main div');
+    const categoryLinks = document.querySelectorAll('.category-list a, .categories a');
     let allTickets = [];
 
-    // Load data from data.json
+    if (!lotteryGrid) {
+        console.error("Error: Could not find lottery grid element!");
+        return;
+    }
+
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             allTickets = data;
-            displayTickets('Ada Kotipathi'); // Default view
+            displayTickets('Ada Kotipathi');
         })
         .catch(error => console.error('Error loading tickets:', error));
 
-    // Category click event
     categoryLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const category = link.getAttribute('data-category');
+            const category = link.getAttribute('data-category') || link.innerText.trim();
             displayTickets(category);
         });
     });
@@ -26,15 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const filteredTickets = allTickets.filter(t => t.lottery_name === category);
 
         if (filteredTickets.length === 0) {
-            lotteryGrid.innerHTML = '<p class="no-tickets">දැනට මෙම ලොතරැයිය සඳහා ටිකට්පත් නොමැත.</p>';
+            lotteryGrid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; padding: 20px;">දැනට මෙම ලොතරැයිය සඳහා ටිකට්පත් නොමැත.</p>';
             return;
         }
 
         filteredTickets.forEach(ticket => {
-            const isSold = ticket.status.toLowerCase() === 'sold';
+            const isSold = ticket.status && ticket.status.toLowerCase() === 'sold';
             const card = document.createElement('div');
-            
-            // Sold නම් අළු පාට කරන class එකක් (sold-card) දානවා
             card.className = `lottery-card ${isSold ? 'sold-card' : ''}`;
             
             card.innerHTML = `
