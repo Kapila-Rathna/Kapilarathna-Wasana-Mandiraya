@@ -1,386 +1,434 @@
 [
     {
-        "id": "7373a0ec",
+        "id": "476b078d",
         "lottery_name": "Ada Kotipathi",
         "ticket_number": "A - 12 - 14 - 15 - 16",
         "draw_date": "3/12/2026",
         "draw_number": "4500",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "3861e52b",
+        "id": "31dcfd96",
         "lottery_name": "Ada Kotipathi",
         "ticket_number": "B - 02 - 08 - 19 - 21",
         "draw_date": "3/12/2026",
         "draw_number": "4500",
-        "price": 40.0
+        "price": "40",
+        "status": "Sold"
     },
     {
-        "id": "1e27b875",
+        "id": "485e9693",
         "lottery_name": "Ada Kotipathi",
         "ticket_number": "C - 10 - 11 - 25 - 30",
         "draw_date": "3/12/2026",
         "draw_number": "4500",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "86f8fe79",
+        "id": "6a4ecced",
         "lottery_name": "Shanida",
         "ticket_number": "R - 01 - 02 - 03 - 04",
         "draw_date": "3/14/2026",
         "draw_number": "3201",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "b5f10652",
+        "id": "eaf0843f",
         "lottery_name": "Shanida",
         "ticket_number": "S - 12 - 15 - 18 - 20",
         "draw_date": "3/14/2026",
         "draw_number": "3201",
-        "price": 40.0
+        "price": "40",
+        "status": "Sold"
     },
     {
-        "id": "6cee4b47",
+        "id": "8200782c",
         "lottery_name": "Shanida",
         "ticket_number": "T - 05 - 09 - 14 - 22",
         "draw_date": "3/14/2026",
         "draw_number": "3201",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "c0884f2e",
+        "id": "072abc07",
         "lottery_name": "Lagna Wasana",
         "ticket_number": "\u0d9a\u0da7\u0d9a - 12 - 14 - 15 - 16",
         "draw_date": "3/13/2026",
         "draw_number": "1205",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "475b1895",
+        "id": "07767c0c",
         "lottery_name": "Lagna Wasana",
         "ticket_number": "\u0dc3\u0dd2\u0d82\u0dc4 - 05 - 09 - 11 - 23",
         "draw_date": "3/13/2026",
         "draw_number": "1205",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "fe84f612",
+        "id": "c211d692",
         "lottery_name": "Lagna Wasana",
         "ticket_number": "\u0db8\u0d9a\u0dbb - 01 - 04 - 08 - 19",
         "draw_date": "3/13/2026",
         "draw_number": "1205",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "4c36032c",
+        "id": "94a3ee36",
         "lottery_name": "Supiri Dhana Sampatha",
         "ticket_number": "S 998877",
         "draw_date": "3/15/2026",
         "draw_number": "800",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "21d0d82d",
+        "id": "2053b6fe",
         "lottery_name": "Supiri Dhana Sampatha",
         "ticket_number": "S 998878",
         "draw_date": "3/15/2026",
         "draw_number": "800",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "c85f6d9b",
+        "id": "d9a6b8e1",
         "lottery_name": "Supiri Dhana Sampatha",
         "ticket_number": "S 998879",
         "draw_date": "3/15/2026",
         "draw_number": "800",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "7dafc5ce",
+        "id": "0d709e80",
         "lottery_name": "Super Ball",
         "ticket_number": "B 445566",
         "draw_date": "3/16/2026",
         "draw_number": "950",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "d6ea8686",
+        "id": "cee1edf8",
         "lottery_name": "Super Ball",
         "ticket_number": "B 445567",
         "draw_date": "3/16/2026",
         "draw_number": "950",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "b62afab3",
+        "id": "602a2235",
         "lottery_name": "Super Ball",
         "ticket_number": "B 445568",
         "draw_date": "3/16/2026",
         "draw_number": "950",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "89c6db9f",
+        "id": "56708c97",
         "lottery_name": "Kapruka",
         "ticket_number": "K 334455",
         "draw_date": "3/17/2026",
         "draw_number": "1102",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "5255d5f4",
+        "id": "06444fa0",
         "lottery_name": "Kapruka",
         "ticket_number": "K 334456",
         "draw_date": "3/17/2026",
         "draw_number": "1102",
-        "price": 40.0
+        "price": "40",
+        "status": "Sold"
     },
     {
-        "id": "57780ff1",
+        "id": "b3f5dd9c",
         "lottery_name": "Kapruka",
         "ticket_number": "K 334457",
         "draw_date": "3/17/2026",
         "draw_number": "1102",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "77fe4932",
+        "id": "417acb25",
         "lottery_name": "Sasiri",
         "ticket_number": "S 223344",
         "draw_date": "3/18/2026",
         "draw_number": "504",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "01f6b4ee",
+        "id": "c3bb8fde",
         "lottery_name": "Sasiri",
         "ticket_number": "S 223345",
         "draw_date": "3/18/2026",
         "draw_number": "504",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "b81ab73c",
+        "id": "bc8ca5b1",
         "lottery_name": "Sasiri",
         "ticket_number": "S 223346",
         "draw_date": "3/18/2026",
         "draw_number": "504",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "360da8fa",
+        "id": "b1ef3d8f",
         "lottery_name": "Jaya Sampatha",
         "ticket_number": "J 778899",
         "draw_date": "3/19/2026",
         "draw_number": "300",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "6e49ddcf",
+        "id": "543751a7",
         "lottery_name": "Jaya Sampatha",
         "ticket_number": "J 778900",
         "draw_date": "3/19/2026",
         "draw_number": "300",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "fd2da1d4",
+        "id": "c49077bd",
         "lottery_name": "Jaya Sampatha",
         "ticket_number": "J 778901",
         "draw_date": "3/19/2026",
         "draw_number": "300",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "2fb3f9a4",
+        "id": "a01157ed",
         "lottery_name": "Mahajana Sampatha",
         "ticket_number": "M 123987",
         "draw_date": "3/20/2026",
         "draw_number": "4100",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "48b0c3c8",
+        "id": "39b41ea5",
         "lottery_name": "Mahajana Sampatha",
         "ticket_number": "M 123988",
         "draw_date": "3/20/2026",
         "draw_number": "4100",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "0d992168",
+        "id": "93b4f8ce",
         "lottery_name": "Mahajana Sampatha",
         "ticket_number": "M 123989",
         "draw_date": "3/20/2026",
         "draw_number": "4100",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "e785009f",
+        "id": "5390fa2c",
         "lottery_name": "Govisetha",
         "ticket_number": "G 456123",
         "draw_date": "3/21/2026",
         "draw_number": "5002",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "936a2805",
+        "id": "52b01eed",
         "lottery_name": "Govisetha",
         "ticket_number": "G 456124",
         "draw_date": "3/21/2026",
         "draw_number": "5002",
-        "price": 40.0
+        "price": "40",
+        "status": "Sold"
     },
     {
-        "id": "c7f70022",
+        "id": "df622c48",
         "lottery_name": "Govisetha",
         "ticket_number": "G 456125",
         "draw_date": "3/21/2026",
         "draw_number": "5002",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "ecd5b65c",
+        "id": "bfb873e6",
         "lottery_name": "Suba Dawasak",
         "ticket_number": "D 789456",
         "draw_date": "3/22/2026",
         "draw_number": "700",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "3034d1bb",
+        "id": "4ab42cfa",
         "lottery_name": "Suba Dawasak",
         "ticket_number": "D 789457",
         "draw_date": "3/22/2026",
         "draw_number": "700",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "c71731b7",
+        "id": "6f8cbe25",
         "lottery_name": "Suba Dawasak",
         "ticket_number": "D 789458",
         "draw_date": "3/22/2026",
         "draw_number": "700",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "1c9c797c",
+        "id": "61e79c05",
         "lottery_name": "Dhana Nidhanaya",
         "ticket_number": "N 321654",
         "draw_date": "3/23/2026",
         "draw_number": "250",
-        "price": 40.0
+        "price": "40",
+        "status": "Sold"
     },
     {
-        "id": "ceae955e",
+        "id": "56930643",
         "lottery_name": "Dhana Nidhanaya",
         "ticket_number": "N 321655",
         "draw_date": "3/23/2026",
         "draw_number": "250",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "227acbfd",
+        "id": "263b73b9",
         "lottery_name": "Dhana Nidhanaya",
         "ticket_number": "N 321656",
         "draw_date": "3/23/2026",
         "draw_number": "250",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "44d40f1d",
+        "id": "0753cd17",
         "lottery_name": "Mega Power",
         "ticket_number": "P 654987",
         "draw_date": "3/24/2026",
         "draw_number": "380",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "9aadabf3",
+        "id": "cf9eff3d",
         "lottery_name": "Mega Power",
         "ticket_number": "P 654988",
         "draw_date": "3/24/2026",
         "draw_number": "380",
-        "price": 40.0
+        "price": "40",
+        "status": "Sold"
     },
     {
-        "id": "aab2801b",
+        "id": "d007b388",
         "lottery_name": "Mega Power",
         "ticket_number": "P 654989",
         "draw_date": "3/24/2026",
         "draw_number": "380",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "3bd0547b",
+        "id": "b826d651",
         "lottery_name": "Handahana",
         "ticket_number": "H 987321",
         "draw_date": "3/25/2026",
         "draw_number": "900",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "8af78f2b",
+        "id": "6d14b0b4",
         "lottery_name": "Handahana",
         "ticket_number": "H 987322",
         "draw_date": "3/25/2026",
         "draw_number": "900",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "14483941",
+        "id": "3b932008",
         "lottery_name": "Handahana",
         "ticket_number": "H 987323",
         "draw_date": "3/25/2026",
         "draw_number": "900",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "e1e4b06a",
+        "id": "cbc66c0d",
         "lottery_name": "Ada Sampatha",
         "ticket_number": "A 147258",
         "draw_date": "3/26/2026",
         "draw_number": "450",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "fc71bd98",
+        "id": "20b22bf7",
         "lottery_name": "Ada Sampatha",
         "ticket_number": "A 147259",
         "draw_date": "3/26/2026",
         "draw_number": "450",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "49b0da03",
+        "id": "f7706efd",
         "lottery_name": "Ada Sampatha",
         "ticket_number": "A 147260",
         "draw_date": "3/26/2026",
         "draw_number": "450",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "c3987370",
+        "id": "4903b700",
         "lottery_name": "NLB Jaya",
         "ticket_number": "J 258369",
         "draw_date": "3/27/2026",
         "draw_number": "150",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "d096ffdf",
+        "id": "3930ce9b",
         "lottery_name": "NLB Jaya",
         "ticket_number": "J 258370",
         "draw_date": "3/27/2026",
         "draw_number": "150",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     },
     {
-        "id": "5bd45c65",
+        "id": "4fdd62a6",
         "lottery_name": "NLB Jaya",
         "ticket_number": "J 258371",
         "draw_date": "3/27/2026",
         "draw_number": "150",
-        "price": 40.0
+        "price": "40",
+        "status": "Available"
     }
 ]
