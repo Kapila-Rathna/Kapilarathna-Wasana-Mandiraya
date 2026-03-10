@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allTickets = [];
 
     if (!lotteryGrid) {
-        console.error("Error: Could not find lottery grid element on this page!");
+        console.error("Error: Could not find lottery grid element!");
         return;
     }
 
@@ -14,12 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             allTickets = data;
-            // මුලින්ම පේන්න ඕන ලොතරැයිය
-            displayTickets('Ada Kotipathi');
+            displayTickets('Ada Kotipathi'); // මුලින්ම පේන්න ඕන එක
         })
         .catch(error => {
             console.error('Error loading tickets:', error);
-            lotteryGrid.innerHTML = '<p>දත්ත පූරණය කිරීමේ දෝෂයකි. කරුණාකර පසුව උත්සාහ කරන්න.</p>';
+            lotteryGrid.innerHTML = '<p>දත්ත පූරණය කිරීමේ දෝෂයකි.</p>';
         });
 
     // කැටගරි ක්ලික් කරාම වෙනස් වෙන්න
