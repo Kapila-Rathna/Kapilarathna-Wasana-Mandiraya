@@ -1,49 +1,49 @@
-Lottery Name,Ticket Number,Draw Date,Draw Number,Price,Status
-Ada Kotipathi,A - 12 - 14 - 15 - 16,3/12/2026,4500,40,Available
-Ada Kotipathi,B - 02 - 08 - 19 - 21,3/12/2026,4500,40,Sold
-Ada Kotipathi,C - 10 - 11 - 25 - 30,3/12/2026,4500,40,Available
-Shanida,R - 01 - 02 - 03 - 04,3/14/2026,3201,40,Available
-Shanida,S - 12 - 15 - 18 - 20,3/14/2026,3201,40,Sold
-Shanida,T - 05 - 09 - 14 - 22,3/14/2026,3201,40,Available
-Lagna Wasana,කටක - 12 - 14 - 15 - 16,3/13/2026,1205,40,Available
-Lagna Wasana,සිංහ - 05 - 09 - 11 - 23,3/13/2026,1205,40,Available
-Lagna Wasana,මකර - 01 - 04 - 08 - 19,3/13/2026,1205,40,Available
-Supiri Dhana Sampatha,S 998877,3/15/2026,800,40,Available
-Supiri Dhana Sampatha,S 998878,3/15/2026,800,40,Available
-Supiri Dhana Sampatha,S 998879,3/15/2026,800,40,Available
-Super Ball,B 445566,3/16/2026,950,40,Available
-Super Ball,B 445567,3/16/2026,950,40,Available
-Super Ball,B 445568,3/16/2026,950,40,Available
-Kapruka,K 334455,3/17/2026,1102,40,Available
-Kapruka,K 334456,3/17/2026,1102,40,Sold
-Kapruka,K 334457,3/17/2026,1102,40,Available
-Sasiri,S 223344,3/18/2026,504,40,Available
-Sasiri,S 223345,3/18/2026,504,40,Available
-Sasiri,S 223346,3/18/2026,504,40,Available
-Jaya Sampatha,J 778899,3/19/2026,300,40,Available
-Jaya Sampatha,J 778900,3/19/2026,300,40,Available
-Jaya Sampatha,J 778901,3/19/2026,300,40,Available
-Mahajana Sampatha,M 123987,3/20/2026,4100,40,Available
-Mahajana Sampatha,M 123988,3/20/2026,4100,40,Available
-Mahajana Sampatha,M 123989,3/20/2026,4100,40,Available
-Govisetha,G 456123,3/21/2026,5002,40,Available
-Govisetha,G 456124,3/21/2026,5002,40,Sold
-Govisetha,G 456125,3/21/2026,5002,40,Available
-Suba Dawasak,D 789456,3/22/2026,700,40,Available
-Suba Dawasak,D 789457,3/22/2026,700,40,Available
-Suba Dawasak,D 789458,3/22/2026,700,40,Available
-Dhana Nidhanaya,N 321654,3/23/2026,250,40,Sold
-Dhana Nidhanaya,N 321655,3/23/2026,250,40,Available
-Dhana Nidhanaya,N 321656,3/23/2026,250,40,Available
-Mega Power,P 654987,3/24/2026,380,40,Available
-Mega Power,P 654988,3/24/2026,380,40,Sold
-Mega Power,P 654989,3/24/2026,380,40,Available
-Handahana,H 987321,3/25/2026,900,40,Available
-Handahana,H 987322,3/25/2026,900,40,Available
-Handahana,H 987323,3/25/2026,900,40,Available
-Ada Sampatha,A 147258,3/26/2026,450,40,Available
-Ada Sampatha,A 147259,3/26/2026,450,40,Available
-Ada Sampatha,A 147260,3/26/2026,450,40,Available
-NLB Jaya,J 258369,3/27/2026,150,40,Available
-NLB Jaya,J 258370,3/27/2026,150,40,Available
-NLB Jaya,J 258371,3/27/2026,150,40,Available
+Lottery Name,Ticket Number,Draw Date,Draw Number,Price
+Ada Kotipathi,A - 12 - 14 - 15 - 16,3/12/2026,4500,40
+Ada Kotipathi,B - 02 - 08 - 19 - 21,3/12/2026,4500,40
+Ada Kotipathi,C - 10 - 11 - 25 - 30,3/12/2026,4500,40
+Shanida,R - 01 - 02 - 03 - 04,3/14/2026,3201,40
+Shanida,S - 12 - 15 - 18 - 20,3/14/2026,3201,40
+Shanida,T - 05 - 09 - 14 - 22,3/14/2026,3201,40
+Lagna Wasana,කටක - 12 - 14 - 15 - 16,3/13/2026,1205,40
+Lagna Wasana,සිංහ - 05 - 09 - 11 - 23,3/13/2026,1205,40
+Lagna Wasana,මකර - 01 - 04 - 08 - 19,3/13/2026,1205,40
+Supiri Dhana Sampatha,S 998877,3/15/2026,800,40
+Supiri Dhana Sampatha,S 998878,3/15/2026,800,40
+Supiri Dhana Sampatha,S 998879,3/15/2026,800,40
+Super Ball,B 445566,3/16/2026,950,40
+Super Ball,B 445567,3/16/2026,950,40
+Super Ball,B 445568,3/16/2026,950,40
+Kapruka,K 334455,3/17/2026,1102,40
+Kapruka,K 334456,3/17/2026,1102,40
+Kapruka,K 334457,3/17/2026,1102,40
+Sasiri,S 223344,3/18/2026,504,40
+Sasiri,S 223345,3/18/2026,504,40
+Sasiri,S 223346,3/18/2026,504,40
+Jaya Sampatha,J 778899,3/19/2026,300,40
+Jaya Sampatha,J 778900,3/19/2026,300,40
+Jaya Sampatha,J 778901,3/19/2026,300,40
+Mahajana Sampatha,M 123987,3/20/2026,4100,40
+Mahajana Sampatha,M 123988,3/20/2026,4100,40
+Mahajana Sampatha,M 123989,3/20/2026,4100,40
+Govisetha,G 456123,3/21/2026,5002,40
+Govisetha,G 456124,3/21/2026,5002,40
+Govisetha,G 456125,3/21/2026,5002,40
+Suba Dawasak,D 789456,3/22/2026,700,40
+Suba Dawasak,D 789457,3/22/2026,700,40
+Suba Dawasak,D 789458,3/22/2026,700,40
+Dhana Nidhanaya,N 321654,3/23/2026,250,40
+Dhana Nidhanaya,N 321655,3/23/2026,250,40
+Dhana Nidhanaya,N 321656,3/23/2026,250,40
+Mega Power,P 654987,3/24/2026,380,40
+Mega Power,P 654988,3/24/2026,380,40
+Mega Power,P 654989,3/24/2026,380,40
+Handahana,H 987321,3/25/2026,900,40
+Handahana,H 987322,3/25/2026,900,40
+Handahana,H 987323,3/25/2026,900,40
+Ada Sampatha,A 147258,3/26/2026,450,40
+Ada Sampatha,A 147259,3/26/2026,450,40
+Ada Sampatha,A 147260,3/26/2026,450,40
+NLB Jaya,J 258369,3/27/2026,150,40
+NLB Jaya,J 258370,3/27/2026,150,40
+NLB Jaya,J 258371,3/27/2026,150,40
