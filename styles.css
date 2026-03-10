@@ -1,0 +1,76 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Ticket Ripple / Shine Effect */
+.ticket-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    animation: none;
+}
+
+.ticket-card:hover::after {
+    animation: shine 1.5s;
+}
+
+@keyframes shine {
+    100% {
+        left: 200%;
+    }
+}
+
+/* Perforated edge effect for tickets */
+.ticket-edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 12px;
+    background-size: 10px 10px;
+    background-image: radial-gradient(circle at 10px 5px, transparent 4px, currentColor 4.5px);
+}
+.ticket-edge.left {
+    left: -6px;
+    background-image: radial-gradient(circle at 0px 5px, transparent 4px, currentColor 4.5px);
+}
+.ticket-edge.right {
+    right: -6px;
+    background-image: radial-gradient(circle at 10px 5px, transparent 4px, currentColor 4.5px);
+}
+
+/* Line Clamp */
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
