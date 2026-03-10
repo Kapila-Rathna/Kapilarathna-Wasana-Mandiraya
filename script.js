@@ -1,22 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // සයිට් එකේ ටිකට් පේන තැන හරියටම අල්ලගන්නවා
-    const lotteryGrid = document.querySelector('.lottery-grid') || document.getElementById('lotteryGrid') || document.querySelector('main div');
+    // සයිට් එකේ ටිකට් පේන තැන (Lottery Grid) අල්ලගන්නවා
+    const lotteryGrid = document.querySelector('.lottery-grid') || document.getElementById('lotteryGrid') || document.querySelector('main div.grid');
     const categoryLinks = document.querySelectorAll('.category-list a, .categories a');
     let allTickets = [];
 
     if (!lotteryGrid) {
-        console.error("Error: Could not find lottery grid element!");
+        console.error("Error: Could not find lottery grid element on this page!");
         return;
     }
 
+    // JSON ඩේටා ලෝඩ් කරනවා
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
             allTickets = data;
+            // මුලින්ම පේන්න ඕන ලොතරැයිය
             displayTickets('Ada Kotipathi');
         })
-        .catch(error => console.error('Error loading tickets:', error));
+        .catch(error => {
+            console.error('Error loading tickets:', error);
+            lotteryGrid.innerHTML = '<p>දත්ත පූරණය කිරීමේ දෝෂයකි. කරුණාකර පසුව උත්සාහ කරන්න.</p>';
+        });
 
+    // කැටගරි ක්ලික් කරාම වෙනස් වෙන්න
     categoryLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -41,14 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             card.innerHTML = `
                 ${isSold ? '<div class="sold-badge">SOLD OUT</div>' : ''}
-                <h3>${ticket.lottery_name}</h3>
+                <h3 style="margin-top: 10px;">${ticket.lottery_name}</h3>
                 <div class="ticket-info">
                     <p><span>අංකය:</span> ${ticket.ticket_number}</p>
                     <p><span>දිනය:</span> ${ticket.draw_date}</p>
                     <p><span>වාරය:</span> ${ticket.draw_number}</p>
-                    <p class="price">මිල: රු. ${ticket.price}</p>
+                    <p class="price" style="font-weight: bold; color: #2ecc71;">මිල: රු. ${ticket.price}</p>
                 </div>
-                <button class="buy-btn" ${isSold ? 'disabled' : ''}>
+                <button class="buy-btn" ${isSold ? 'disabled' : ''} style="width: 100%; padding: 10px; border: none; border-radius: 5px; background: #27ae60; color: white; cursor: pointer;">
                     ${isSold ? 'විකුණා ඇත' : 'දැන්ම මිලදී ගන්න'}
                 </button>
             `;
