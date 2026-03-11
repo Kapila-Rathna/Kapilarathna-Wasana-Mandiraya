@@ -1,76 +1,116 @@
-/* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-html {
-    scroll-behavior: smooth;
-}
-
 /* Custom Scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+    background: transparent;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 10px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8;
+    background-color: #334155;
+    border-radius: 20px;
 }
 
-/* Ticket Ripple / Shine Effect */
+/* Ticket Card Styling */
 .ticket-card {
     position: relative;
+    background: #1e293b;
+    border-radius: 12px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border-color: rgba(245, 158, 11, 0.3); /* brand-gold */
+}
+
+/* The perforated edge effect */
+.ticket-card::before, .ticket-card::after {
+    content: '';
+    position: absolute;
+    top: 60px; /* Position matching the colored header border */
+    width: 20px;
+    height: 20px;
+    background: #0b0f19; /* matches body bg */
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.ticket-card::before {
+    left: -10px;
+    box-shadow: inset -1px 0 0 rgba(255,255,255,0.05);
 }
 
 .ticket-card::after {
+    right: -10px;
+    box-shadow: inset 1px 0 0 rgba(255,255,255,0.05);
+}
+
+/* Dashed divider line for ticket */
+.ticket-divider {
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-top: 2px dashed rgba(255, 255, 255, 0.1);
+    margin: 15px 0;
+}
+
+/* Pulse animation for cart badge */
+@keyframes pop {
+    0% { transform: scale(0); }
+    40% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+.badge-pop {
+    animation: pop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Result Card Styling */
+.result-card {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.result-card::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
-    transform: skewX(-25deg);
-    animation: none;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f59e0b, #fbbf24);
 }
 
-.ticket-card:hover::after {
-    animation: shine 1.5s;
+.winning-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #1a2235;
+    background: radial-gradient(circle at 30% 30%, #fbbf24, #d97706);
+    box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3), inset 0 2px 4px rgba(255,255,255,0.5);
+    text-shadow: 0 1px 2px rgba(255,255,255,0.3);
 }
 
-@keyframes shine {
-    100% {
-        left: 200%;
-    }
-}
-
-/* Perforated edge effect for tickets */
-.ticket-edge {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 12px;
-    background-size: 10px 10px;
-    background-image: radial-gradient(circle at 10px 5px, transparent 4px, currentColor 4.5px);
-}
-.ticket-edge.left {
-    left: -6px;
-    background-image: radial-gradient(circle at 0px 5px, transparent 4px, currentColor 4.5px);
-}
-.ticket-edge.right {
-    right: -6px;
-    background-image: radial-gradient(circle at 10px 5px, transparent 4px, currentColor 4.5px);
-}
-
-/* Line Clamp */
-.line-clamp-1 {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.winning-letter {
+    background: radial-gradient(circle at 30% 30%, #ef4444, #b91c1c);
+    color: white;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3), inset 0 2px 4px rgba(255,255,255,0.3);
+    text-shadow: none;
 }

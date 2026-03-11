@@ -1,269 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kapilarathna Wasana Mandiraya | Ticket Booking</title>
+    <title>K.G Kapilarathna - Wasana Mandiraya</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            500: '#14b8a6', // Teal
-                            600: '#0d9488',
-                            900: '#134e4a',
-                        },
-                        gold: {
-                            400: '#fbbf24',
-                            500: '#f59e0b',
-                        }
-                    },
                     fontFamily: {
                         sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#0b0f19',
+                        'brand-card': '#1a2235',
+                        'brand-gold': '#f59e0b',
+                        'brand-accent': '#3b82f6',
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
-    
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo & Title -->
-                <div class="flex items-center space-x-3">
-                    <div class="bg-gradient-to-r from-brand-500 to-blue-600 text-transparent bg-clip-text">
-                        <i class="fa-solid fa-ticket text-brand-600 text-3xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="font-bold text-xl md:text-2xl tracking-tight text-gray-900 leading-none">Kapilarathna</h1>
-                        <p class="text-xs md:text-sm font-medium text-brand-600 uppercase tracking-wider">Wasana Mandiraya</p>
-                    </div>
-                </div>
 
-                <!-- Desktop Social & Cart -->
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="https://www.facebook.com/profile.php?id=61586054889655" target="_blank" class="text-gray-400 hover:text-blue-600 transition duration-300">
-                        <i class="fa-brands fa-facebook text-2xl"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@kgkapilarathnawasanamandiraya" target="_blank" class="text-gray-400 hover:text-red-600 transition duration-300">
-                        <i class="fa-brands fa-youtube text-2xl"></i>
-                    </a>
-                    
-                    <button onclick="toggleCart()" class="relative bg-brand-600 hover:bg-brand-500 text-white px-5 py-2.5 rounded-full font-medium transition duration-300 shadow-lg shadow-brand-500/30 flex items-center space-x-2 transformation hover:scale-105">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span>Cart</span>
-                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold w-6 h-6 flex items-center justify-center rounded-full border-2 border-white shadow-sm">0</span>
-                    </button>
-                </div>
+<body class="bg-brand-dark text-slate-200 font-sans min-h-screen flex flex-col">
 
-                <!-- Mobile Cart Button -->
-                <div class="flex md:hidden items-center">
-                    <button onclick="toggleCart()" class="relative text-gray-700 hover:text-brand-600 transition duration-300 p-2">
-                        <i class="fa-solid fa-cart-shopping text-2xl"></i>
-                        <span id="cart-count-mobile" class="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-white">0</span>
-                    </button>
+    <!-- Header / Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/10 shadow-lg">
+        <div class="container mx-auto px-4 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('home')">
+                <div
+                    class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-gold to-yellow-200 flex items-center justify-center text-brand-dark font-bold text-xl shadow-[0_0_15px_rgba(245,158,11,0.5)]">
+                    <i class="fa-solid fa-clover"></i>
+                </div>
+                <div>
+                    <h1
+                        class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-brand-gold to-yellow-200 leading-tight tracking-wide hidden sm:block">
+                        WASANA MANDIRAYA
+                    </h1>
+                    <p class="text-[10px] text-slate-400 hidden sm:block tracking-[0.2em] font-medium uppercase">K.G
+                        Kapilarathna</p>
+                    <h1 class="text-lg font-bold text-brand-gold sm:hidden">WASANA</h1>
                 </div>
             </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <div class="relative bg-brand-900 text-white overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-brand-600 to-blue-900 opacity-90"></div>
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 lg:py-24 flex flex-col items-center text-center">
-            <span class="px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-sm text-sm font-semibold tracking-wide border border-white/30 mb-6 drop-shadow-md">No.1 Lottery Agent in Sri Lanka</span>
-            <h2 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
-                Your Next Big <span class="text-gold-400">Winning</span> Starts Here
-            </h2>
-            <p class="text-lg md:text-xl text-brand-100 max-w-2xl mb-10 drop-shadow">
-                Book your lucky lottery tickets online and get them easily via WhatsApp. Fast, secure, and fully reliable!
-            </p>
-            <div class="flex gap-4">
-                <a href="#tickets-section" class="bg-gold-500 hover:bg-gold-400 text-brand-900 font-bold px-8 py-3.5 rounded-full transition duration-300 transform hover:-translate-y-1 shadow-xl shadow-gold-500/40 text-lg">
-                    Buy Tickets Now
-                </a>
+            <!-- Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium">
+                <button onclick="switchTab('home')" class="nav-btn text-brand-gold relative group">
+                    Home
+                    <span
+                        class="absolute -bottom-1 left-0 w-full h-0.5 bg-brand-gold rounded-full scale-x-100 transition-transform origin-left"></span>
+                </button>
+                <button onclick="switchTab('tickets')"
+                    class="nav-btn text-slate-300 hover:text-brand-gold transition-colors relative group">
+                    Buy Tickets
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold rounded-full transition-all group-hover:w-full"></span>
+                </button>
+                <button onclick="switchTab('results')"
+                    class="nav-btn text-slate-300 hover:text-brand-gold transition-colors relative group">
+                    Winning Results
+                    <span
+                        class="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold rounded-full transition-all group-hover:w-full"></span>
+                </button>
+            </nav>
+
+            <!-- Cart Toggle & Mobile Menu -->
+            <div class="flex items-center gap-4">
+                <button onclick="toggleCart()"
+                    class="relative p-2 text-slate-300 hover:text-brand-gold transition-colors">
+                    <i class="fa-solid fa-cart-shopping text-2xl"></i>
+                    <span id="cart-badge"
+                        class="absolute -top-1 -right-1 bg-red-500 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-brand-dark scale-0 transition-transform">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 text-slate-300"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
             </div>
         </div>
-        <!-- Decorative waves bottom -->
-        <div class="absolute bottom-0 w-full overflow-hidden leading-none">
-            <svg class="relative block w-full h-[50px] md:h-[100px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,130.98,121.22,201.2,111.41C242.09,105.74,282.88,83.5,321.39,56.44Z" class="fill-gray-50"></path>
-            </svg>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-brand-card border-b border-white/10 absolute w-full shadow-2xl">
+            <div class="flex flex-col p-4 space-y-4">
+                <button onclick="switchTab('home'); document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="text-left font-medium text-brand-gold nav-btn-mobile">Home</button>
+                <button onclick="switchTab('tickets'); document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="text-left font-medium text-slate-300 nav-btn-mobile">Buy Tickets</button>
+                <button onclick="switchTab('results'); document.getElementById('mobile-menu').classList.add('hidden')"
+                    class="text-left font-medium text-slate-300 nav-btn-mobile">Winning Results</button>
+            </div>
         </div>
-    </div>
+    </header>
 
     <!-- Main Content -->
-    <main id="tickets-section" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
-        
-        <div class="flex flex-col lg:flex-row gap-8">
-            <!-- Sidebar Filters -->
-            <div class="w-full lg:w-1/4 flex flex-col">
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sticky top-28">
-                    <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
-                        <i class="fa-solid fa-filter text-brand-500 mr-2"></i> Categories
-                    </h3>
-                    <div class="relative mb-4">
-                        <i class="fa-solid fa-search absolute left-3 top-3 text-gray-400"></i>
-                        <input type="text" id="category-search" placeholder="Search lottery..." class="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent text-sm transition">
-                    </div>
-                    <ul id="category-list" class="space-y-1.5 max-h-[60vh] overflow-y-auto custom-scrollbar pr-2">
-                        <!-- Categories dynamically loaded here -->
-                    </ul>
+    <main class="flex-grow pt-20">
+        <!-- HOME TAB -->
+        <section id="tab-home"
+            class="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center relative overflow-hidden px-4 py-20">
+            <!-- Background Glows -->
+            <div
+                class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-gold/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-accent/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+
+            <div class="max-w-4xl text-center space-y-8 z-10">
+                <div
+                    class="inline-block px-4 py-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold text-sm font-semibold tracking-wide mb-4 animate-[pulse_3s_ease-in-out_infinite]">
+                    🏆 Your Trusted Official Lottery Agent
                 </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+                    Change Your Destiny <br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">Today!</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                    Purchase guaranteed authentic Sri Lankan lottery tickets online. Fast, secure, and hassle-free
+                    directly through WhatsApp.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+                    <button onclick="switchTab('tickets')"
+                        class="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-brand-gold to-yellow-500 hover:from-yellow-400 hover:to-brand-gold text-brand-dark font-bold rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(245,158,11,0.4)] flex items-center justify-center gap-2 text-lg">
+                        <i class="fa-solid fa-ticket"></i> Buy Tickets Now
+                    </button>
+                    <button onclick="switchTab('results')"
+                        class="w-full sm:w-auto px-10 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-full transition-all flex items-center justify-center gap-2 text-lg">
+                        <i class="fa-solid fa-trophy text-brand-gold"></i> Check Results
+                    </button>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-16 max-w-3xl mx-auto border-t border-white/10 mt-16">
+                    <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                        <h3 class="text-4xl font-black text-brand-gold mb-1">16</h3>
+                        <p class="text-sm font-medium text-slate-300">Lottery Brands</p>
+                    </div>
+                    <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                        <h3 class="text-4xl font-black text-brand-accent mb-1">100%</h3>
+                        <p class="text-sm font-medium text-slate-300">Authentic</p>
+                    </div>
+                    <div class="text-center p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                        <h3 class="text-4xl font-black text-emerald-400 mb-1">Rs.40</h3>
+                        <p class="text-sm font-medium text-slate-300">Fixed Price</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TICKETS TAB -->
+        <section id="tab-tickets" class="hidden container mx-auto px-4 py-12">
+            <div class="mb-12 text-center max-w-2xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-white mb-3">Available Tickets</h2>
+                <p class="text-slate-400 text-lg">Select your lucky numbers from our wide variety of lotteries and
+                    checkout in seconds.</p>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="mb-10 flex flex-wrap justify-center gap-3" id="category-filters">
+                <button
+                    class="filter-btn active px-5 py-2.5 rounded-full bg-brand-gold text-brand-dark font-bold text-sm transition-all shadow-lg shadow-brand-gold/20"
+                    data-category="All">All Lotteries</button>
+                <!-- Filter buttons generated via JS -->
+            </div>
+
+            <!-- Loading State -->
+            <div id="tickets-loading" class="flex flex-col items-center justify-center py-20 hidden">
+                <i class="fa-solid fa-circle-notch fa-spin text-5xl text-brand-gold mb-4"></i>
+                <p class="text-slate-400 font-medium">Loading lucky tickets...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="tickets-error"
+                class="hidden text-center py-10 text-red-400 bg-red-400/10 rounded-xl border border-red-400/20 max-w-lg mx-auto">
+                <i class="fa-solid fa-triangle-exclamation text-3xl mb-3"></i>
+                <p>Failed to load tickets. Please try again later.</p>
             </div>
 
             <!-- Tickets Grid -->
-            <div class="w-full lg:w-3/4">
-                <div class="flex justify-between items-center mb-6">
-                    <h3 id="current-category-title" class="text-2xl font-bold text-gray-900">All Lotteries</h3>
-                    <span id="ticket-count" class="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Loading...</span>
-                </div>
-                
-                <!-- Loading State -->
-                <div id="loading-state" class="flex flex-col items-center justify-center py-20">
-                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-600 mb-4"></div>
-                    <p class="text-gray-500 font-medium">Loading lucky tickets...</p>
-                </div>
-
-                <!-- Empty State -->
-                <div id="empty-state" class="hidden flex flex-col items-center justify-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
-                    <i class="fa-solid fa-ticket text-gray-300 text-6xl mb-4"></i>
-                    <h4 class="text-xl font-bold text-gray-800 mb-2">No tickets available</h4>
-                    <p class="text-gray-500 text-center max-w-md">There are currently no tickets available for this category. Please check back later.</p>
-                </div>
-
-                <!-- Grid -->
-                <div id="tickets-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 hidden">
-                    <!-- Tickets dynamically loaded here -->
-                </div>
+            <div id="tickets-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Ticket Cards generated via JS -->
             </div>
-        </div>
+        </section>
 
+        <!-- RESULTS TAB -->
+        <section id="tab-results" class="hidden container mx-auto px-4 py-12">
+            <div class="mb-12 text-center max-w-2xl mx-auto">
+                <h2 class="text-4xl font-extrabold text-white mb-3">Winning Results</h2>
+                <p class="text-slate-400 text-lg">Check the latest draw results and see if you are the next millionaire!
+                </p>
+            </div>
+
+            <!-- Loading State -->
+            <div id="results-loading" class="flex flex-col items-center justify-center py-20 hidden">
+                <i class="fa-solid fa-circle-notch fa-spin text-5xl text-brand-gold mb-4"></i>
+                <p class="text-slate-400 font-medium">Loading results...</p>
+            </div>
+
+            <div id="results-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Result Cards generated via JS -->
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-brand-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                <!-- Brand Info -->
-                <div class="col-span-1 md:col-span-1">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <i class="fa-solid fa-ticket text-brand-500 text-3xl"></i>
-                        <div>
-                            <h2 class="font-bold text-xl tracking-tight leading-none text-white">Kapilarathna</h2>
-                            <p class="text-xs font-medium text-brand-400 uppercase tracking-wider">Wasana Mandiraya</p>
+    <footer class="bg-brand-dark border-t border-white/10 pt-16 pb-8 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start gap-3 mb-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-brand-dark font-bold text-sm">
+                            <i class="fa-solid fa-clover"></i>
                         </div>
+                        <h2 class="text-xl font-bold text-white">WASANA MANDIRAYA</h2>
                     </div>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                        Your trusted partner for National Lotteries Board (NLB) and Development Lotteries Board (DLB) tickets. Play smart, win big!
-                    </p>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-white border-b border-gray-800 pb-2">Quick Links</h4>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-brand-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-brand-500"></i> Home</a></li>
-                        <li><a href="#tickets-section" class="hover:text-brand-400 transition flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-brand-500"></i> Buy Tickets</a></li>
-                    </ul>
+                    <p class="text-sm text-slate-400 mb-1">Official Lottery Agency</p>
+                    <p class="text-brand-gold font-medium">K.G Kapilarathna</p>
                 </div>
 
-                <!-- Contact & Social -->
-                <div>
-                    <h4 class="text-lg font-bold mb-6 text-white border-b border-gray-800 pb-2">Connect With Us</h4>
-                    <ul class="space-y-4 text-sm text-gray-400 mb-6">
-                        <li class="flex items-start">
-                            <i class="fa-brands fa-whatsapp mt-1 mr-3 text-brand-500 text-lg"></i>
-                            <span>+94 77 044 6824<br><span class="text-xs text-gray-500">Available for WhatsApp Orders</span></span>
-                        </li>
-                    </ul>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/profile.php?id=61586054889655" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition duration-300">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@kgkapilarathnawasanamandiraya" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition duration-300">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </div>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/94770446824" target="_blank"
+                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-all transform hover:-translate-y-1 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61586054889655" target="_blank"
+                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-[#1877F2] hover:text-white hover:border-[#1877F2] transition-all transform hover:-translate-y-1 shadow-lg">
+                        <i class="fa-brands fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@kgkapilarathnawasanamandiraya" target="_blank"
+                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:bg-[#FF0000] hover:text-white hover:border-[#FF0000] transition-all transform hover:-translate-y-1 shadow-lg">
+                        <i class="fa-brands fa-youtube text-xl"></i>
+                    </a>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-xs text-gray-500 mb-4 md:mb-0">
-                    &copy; 2026 Kapilarathna Wasana Mandiraya. All rights reserved.
-                </p>
-                <div class="text-xs text-gray-600 flex items-center space-x-1">
-                    <span>Designed for</span> <i class="fa-solid fa-heart text-red-500 px-1"></i> <span>Success</span>
-                </div>
+            <div
+                class="mt-12 pt-8 border-t border-white/5 text-center text-sm text-slate-500 flex flex-col sm:flex-row justify-center items-center gap-2">
+                <span>&copy; 2026 K.G Kapilarathna - Wasana Mandiraya.</span>
+                <span class="hidden sm:inline">|</span>
+                <span>All Rights Reserved.</span>
             </div>
         </div>
     </footer>
 
-    <!-- Cart Overlay & Drawer -->
-    <div id="cart-overlay" class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="toggleCart()"></div>
-    
-    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col">
+    <!-- Cart Drawer Toggle Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden transition-opacity"
+        onclick="toggleCart()"></div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer"
+        class="fixed top-0 right-0 h-full w-full sm:w-[450px] bg-brand-card shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 flex flex-col border-l border-white/10">
         <!-- Cart Header -->
-        <div class="bg-brand-600 text-white p-5 flex justify-between items-center shadow-md">
-            <h2 class="text-lg font-bold flex items-center"><i class="fa-solid fa-cart-shopping mr-3"></i> Your Cart</h2>
-            <button onclick="toggleCart()" class="text-white hover:text-brand-200 focus:outline-none transition w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <i class="fa-solid fa-xmark text-lg"></i>
+        <div class="px-6 py-5 border-b border-white/10 flex items-center justify-between bg-brand-dark">
+            <h2 class="text-xl font-bold text-white flex items-center gap-3">
+                <i class="fa-solid fa-cart-shopping text-brand-gold"></i> Your Lucky Cart
+            </h2>
+            <button onclick="toggleCart()"
+                class="text-slate-400 hover:text-white w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
             </button>
         </div>
 
         <!-- Cart Items -->
-        <div id="cart-items" class="flex-grow overflow-y-auto p-5 space-y-4 bg-gray-50 custom-scrollbar">
-            <!-- Empty Cart msg -->
-            <div id="cart-empty-msg" class="flex flex-col items-center justify-center h-full text-gray-400">
-                <i class="fa-solid fa-cart-arrow-down text-5xl mb-4 text-gray-300"></i>
-                <p class="font-medium text-lg text-gray-600">Your cart is empty</p>
-                <p class="text-sm mt-1 text-center">Add some lucky tickets to get started!</p>
-                <button onclick="toggleCart()" class="mt-6 px-6 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 shadow-sm transition">Browse Tickets</button>
-            </div>
-            <!-- Dynamic Items -->
+        <div id="cart-items" class="flex-grow overflow-y-auto p-4 space-y-3 custom-scrollbar">
+            <!-- Dynamically populated -->
         </div>
 
         <!-- Cart Footer -->
-        <div class="p-5 bg-white border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] pt-6">
-            <div class="flex justify-between items-center mb-6">
-                <span class="text-gray-500 font-medium">Total Tickets: <span id="cart-total-count" class="text-gray-800 font-bold ml-1">0</span></span>
+        <div class="p-6 border-t border-white/10 bg-brand-dark space-y-4">
+            <div class="flex justify-between items-center text-slate-300 pb-2 border-b border-white/5">
+                <span class="font-medium">Total Tickets</span>
+                <span id="cart-qty" class="font-bold text-white bg-slate-800 px-3 py-1 rounded-md text-sm">0</span>
+            </div>
+            <div class="flex justify-between items-center text-lg pt-1">
+                <span class="font-bold text-slate-200">Total Amount</span>
                 <div class="text-right">
-                    <p class="text-xs text-gray-500 font-medium mb-1">Total Amount</p>
-                    <span class="text-2xl font-black text-brand-600">Rs. <span id="cart-total-price">0.00</span></span>
+                    <span class="text-sm text-slate-400 mr-1 font-medium">Rs.</span>
+                    <span id="cart-total" class="font-black text-3xl text-brand-gold drop-shadow-sm">0</span>
                 </div>
             </div>
-            <button onclick="checkoutWhatsApp()" class="w-full bg-[#25D366] hover:bg-[#1ebd5a] text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-green-500/30 transition duration-300 flex items-center justify-center space-x-2 transform hover:-translate-y-1">
-                <i class="fa-brands fa-whatsapp text-xl"></i>
-                <span>Buy Now via WhatsApp</span>
+            <button id="checkout-btn" onclick="checkout()" disabled
+                class="w-full mt-2 py-4 rounded-xl bg-[#25D366] disabled:bg-slate-800 disabled:text-slate-500 disabled:cursor-not-allowed hover:bg-[#1fae54] text-white font-bold text-lg shadow-[0_4px_15px_rgba(37,211,102,0.3)] flex items-center justify-center gap-3 transition-all transform active:scale-95">
+                <i class="fa-brands fa-whatsapp text-2xl"></i> Checkout via WhatsApp
             </button>
-            <p class="text-[11px] text-center text-gray-400 mt-4 flex items-center justify-center">
-                <i class="fa-solid fa-lock mr-1.5"></i> Secure checkout directly with the agent
+            <p class="text-xs text-center text-slate-500 font-medium">
+                <i class="fa-solid fa-lock mr-1"></i> Fast & Secure checkout
             </p>
         </div>
     </div>
 
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-full shadow-2xl z-50 opacity-0 translate-y-10 transition-all duration-300 pointer-events-none flex items-center space-x-3 border border-gray-700">
-        <i class="fa-solid fa-circle-check text-green-400"></i>
-        <span id="toast-message" class="font-medium text-sm">Item added to cart</span>
+    <!-- Toast Notification -->
+    <div id="toast"
+        class="fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-slate-800 border border-brand-gold/50 text-white px-6 py-3 rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.5)] z-[80] flex items-center gap-3 translate-y-[200%] transition-transform duration-300">
+        <i class="fa-solid fa-circle-check text-brand-gold text-lg"></i>
+        <span id="toast-msg" class="text-sm font-semibold tracking-wide">Added to cart!</span>
     </div>
 
-    <!-- Scripts -->
+    <!-- Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
