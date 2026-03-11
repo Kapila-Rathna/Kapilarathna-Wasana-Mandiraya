@@ -10,7 +10,6 @@ const CATEGORIES = [
     "Mega Power", "Handahana", "Ada Sampatha", "NLB Jaya"
 ];
 
-// Specific colors for some prominent lotteries to give the UI a nice aesthetic
 const BRAND_COLORS = {
     "Mahajana Sampatha": "from-red-600 to-red-800",
     "Govisetha": "from-green-600 to-green-800",
@@ -40,12 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --- TAB NAVIGATION ---
 function switchTab(tabId) {
-    // Hide all tabs
     document.getElementById('tab-home').classList.add('hidden');
     document.getElementById('tab-tickets').classList.add('hidden');
     document.getElementById('tab-results').classList.add('hidden');
     
-    // Reset nav buttons
     document.querySelectorAll('.nav-btn > span').forEach(span => {
         span.classList.remove('w-full', 'scale-x-100');
         span.classList.add('w-0');
@@ -55,16 +52,13 @@ function switchTab(tabId) {
         btn.classList.add('text-slate-300');
     });
 
-    // Mobile nav reset
     document.querySelectorAll('.nav-btn-mobile').forEach(btn => {
         btn.classList.remove('text-brand-gold');
         btn.classList.add('text-slate-300');
     });
 
-    // Show selected tab
     document.getElementById(`tab-${tabId}`).classList.remove('hidden');
     
-    // Update nav headers (Desktop)
     const activeBtns = Array.from(document.querySelectorAll('.nav-btn')).filter(b => b.textContent.trim().toLowerCase().includes(tabId === 'home' ? 'home' : (tabId === 'tickets' ? 'buy' : 'winning')));
     activeBtns.forEach(btn => {
         btn.classList.remove('text-slate-300');
@@ -77,7 +71,6 @@ function switchTab(tabId) {
         }
     });
 
-    // Update nav headers (Mobile)
     const mobileActiveBtns = Array.from(document.querySelectorAll('.nav-btn-mobile')).filter(b => b.textContent.trim().toLowerCase().includes(tabId === 'home' ? 'home' : (tabId === 'tickets' ? 'buy' : 'winning')));
     mobileActiveBtns.forEach(btn => {
         btn.classList.remove('text-slate-300');
@@ -87,7 +80,7 @@ function switchTab(tabId) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// --- DATA FETCHING ---
+// --- DATA FETCHING (CACHE BUSTED) ---
 async function loadTickets() {
     const loading = document.getElementById('tickets-loading');
     const errorCont = document.getElementById('tickets-error');
@@ -98,7 +91,8 @@ async function loadTickets() {
     if(grid) grid.innerHTML = '';
 
     try {
-        const response = await fetch('tickets.json');
+        // Cache buster added here
+        const response = await fetch('tickets.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error('Failed to fetch data');
         allTickets = await response.json();
         renderTickets();
@@ -117,7 +111,8 @@ async function loadResults() {
     if(loading) loading.classList.remove('hidden');
     
     try {
-        const response = await fetch('results.json');
+        // Cache buster added here
+        const response = await fetch('results.json?v=' + new Date().getTime());
         if (!response.ok) throw new Error('Failed to fetch results');
         allResults = await response.json();
         renderResults();
@@ -223,7 +218,6 @@ function renderResults() {
     }
 
     allResults.forEach(res => {
-        // Fix string splitting for winning numbers (e.g. A-14-22 -> ['A', '14', '22'])
         let numbersArray = res.winning_numbers ? res.winning_numbers.split('-') : [];
         
         let numbersHTML = numbersArray.map(num => {
@@ -387,7 +381,6 @@ function checkout() {
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
     
-    // Clear cart
     cart = [];
     saveCart();
     updateCartUI();
@@ -396,7 +389,6 @@ function checkout() {
     window.open(whatsappURL, '_blank');
 }
 
-// --- UTILS ---
 function showToast(msg) {
     const toast = document.getElementById('toast');
     if(!toast) return;
