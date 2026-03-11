@@ -93,9 +93,9 @@ async function loadTickets() {
     const errorCont = document.getElementById('tickets-error');
     const grid = document.getElementById('tickets-grid');
     
-    loading.classList.remove('hidden');
-    errorCont.classList.add('hidden');
-    grid.innerHTML = '';
+    if(loading) loading.classList.remove('hidden');
+    if(errorCont) errorCont.classList.add('hidden');
+    if(grid) grid.innerHTML = '';
 
     try {
         const response = await fetch('tickets.json');
@@ -104,9 +104,9 @@ async function loadTickets() {
         renderTickets();
     } catch (error) {
         console.error(error);
-        errorCont.classList.remove('hidden');
+        if(errorCont) errorCont.classList.remove('hidden');
     } finally {
-        loading.classList.add('hidden');
+        if(loading) loading.classList.add('hidden');
     }
 }
 
@@ -114,7 +114,7 @@ async function loadResults() {
     const loading = document.getElementById('results-loading');
     const grid = document.getElementById('results-grid');
     
-    loading.classList.remove('hidden');
+    if(loading) loading.classList.remove('hidden');
     
     try {
         const response = await fetch('results.json');
@@ -123,22 +123,23 @@ async function loadResults() {
         renderResults();
     } catch (error) {
         console.error("Failed to load results", error);
-        grid.innerHTML = '<p class="col-span-full text-center text-red-400">Unable to load results. Please check results.json.</p>';
+        if(grid) grid.innerHTML = '<p class="col-span-full text-center text-red-400">Unable to load results. Please check results.json.</p>';
     } finally {
-        loading.classList.add('hidden');
+        if(loading) loading.classList.add('hidden');
     }
 }
 
 // --- RENDERING TICKETS ---
 function initFilters() {
     const filterCont = document.getElementById('category-filters');
+    if(!filterCont) return;
+    
     CATEGORIES.forEach(cat => {
         const btn = document.createElement('button');
         btn.className = "filter-btn px-5 py-2.5 rounded-full border border-white/10 text-slate-300 font-medium text-sm hover:bg-white/5 transition-all shadow-sm";
         btn.textContent = cat;
         btn.dataset.category = cat;
         btn.onclick = () => {
-            // Update active state
             document.querySelectorAll('.filter-btn').forEach(b => {
                 b.classList.remove('bg-brand-gold', 'text-brand-dark', 'font-bold', 'border-brand-gold', 'shadow-lg', 'shadow-brand-gold/20');
                 b.classList.add('border-white/10', 'text-slate-300', 'font-medium');
@@ -155,11 +156,12 @@ function initFilters() {
 
 function renderTickets() {
     const grid = document.getElementById('tickets-grid');
+    if(!grid) return;
     grid.innerHTML = '';
     
     const filtered = currentCategory === "All" 
         ? allTickets 
-        : allTickets.filter(t => t.lotteryName === currentCategory);
+        : allTickets.filter(t => t.lottery_name === currentCategory);
 
     if (filtered.length === 0) {
         grid.innerHTML = `
@@ -173,26 +175,26 @@ function renderTickets() {
     }
 
     filtered.forEach(ticket => {
-        const colorClass = BRAND_COLORS[ticket.lotteryName] || "from-slate-600 to-slate-800";
+        const colorClass = BRAND_COLORS[ticket.lottery_name] || "from-slate-600 to-slate-800";
         
         const card = document.createElement('div');
         card.className = "ticket-card flex flex-col justify-between";
         card.innerHTML = `
             <div class="h-16 bg-gradient-to-r ${colorClass} flex items-center justify-center px-4 relative border-b border-black/30">
-                <h3 class="font-bold text-white text-lg tracking-wide shadow-sm text-center drop-shadow-md">${ticket.lotteryName}</h3>
+                <h3 class="font-bold text-white text-lg tracking-wide shadow-sm text-center drop-shadow-md">${ticket.lottery_name}</h3>
             </div>
             
             <div class="p-6 flex-grow flex flex-col items-center text-center">
                 <div class="text-xs font-bold text-brand-gold bg-brand-gold/10 px-4 py-1.5 rounded-full mb-4 uppercase tracking-wider border border-brand-gold/20">
-                    Draw: #${ticket.drawNumber}
+                    Draw: #${ticket.draw_number}
                 </div>
                 
-                <p class="text-sm border flex items-center justify-center gap-2 border-slate-700/50 bg-slate-800/50 rounded-lg px-3 py-2 text-slate-300 mb-4 w-full shadow-inner"><i class="fa-regular fa-calendar text-brand-gold"></i> ${ticket.drawDate}</p>
+                <p class="text-sm border flex items-center justify-center gap-2 border-slate-700/50 bg-slate-800/50 rounded-lg px-3 py-2 text-slate-300 mb-4 w-full shadow-inner"><i class="fa-regular fa-calendar text-brand-gold"></i> ${ticket.draw_date}</p>
                 
                 <div class="ticket-divider"></div>
                 
                 <h2 class="text-3xl font-black text-white tracking-[0.15em] my-3 drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]">
-                    ${ticket.ticketNumber}
+                    ${ticket.ticket_number}
                 </h2>
                 
                 <div class="ticket-divider"></div>
@@ -200,7 +202,7 @@ function renderTickets() {
 
             <div class="p-5 pt-0 flex items-center justify-between">
                 <div class="text-xl font-black text-brand-gold drop-shadow-sm"><span class="text-sm font-medium text-slate-400 mr-1">Rs.</span>${TICKET_PRICE}</div>
-                <button onclick="addToCart('${ticket.id}')" class="bg-white/10 hover:bg-brand-gold hover:text-brand-dark text-white px-5 py-2.5 rounded-lg font-bold transition-all transform hover:scale-105 flex items-center gap-2 text-sm shadow-md">
+                <button onclick="addToCart('${ticket.lottery_name}', '${ticket.ticket_number}')" class="bg-white/10 hover:bg-brand-gold hover:text-brand-dark text-white px-5 py-2.5 rounded-lg font-bold transition-all transform hover:scale-105 flex items-center gap-2 text-sm shadow-md">
                     <i class="fa-solid fa-cart-plus"></i> Add
                 </button>
             </div>
@@ -212,6 +214,7 @@ function renderTickets() {
 // --- RENDERING RESULTS ---
 function renderResults() {
     const grid = document.getElementById('results-grid');
+    if(!grid) return;
     grid.innerHTML = '';
 
     if (allResults.length === 0) {
@@ -220,7 +223,10 @@ function renderResults() {
     }
 
     allResults.forEach(res => {
-        let numbersHTML = res.winningNumbers.map(num => {
+        // Fix string splitting for winning numbers (e.g. A-14-22 -> ['A', '14', '22'])
+        let numbersArray = res.winning_numbers ? res.winning_numbers.split('-') : [];
+        
+        let numbersHTML = numbersArray.map(num => {
             const isLetter = isNaN(num); 
             return `<div class="${isLetter ? 'winning-circle winning-letter' : 'winning-circle'}">${num}</div>`;
         }).join('');
@@ -229,15 +235,15 @@ function renderResults() {
         card.className = "result-card p-6 flex flex-col items-center bg-brand-card";
         card.innerHTML = `
             <div class="w-full flex justify-between items-start mb-4">
-                <h3 class="text-xl font-bold text-white leading-tight">${res.lotteryName}</h3>
+                <h3 class="text-xl font-bold text-white leading-tight">${res.lottery_name}</h3>
                 <div class="bg-brand-gold/20 text-brand-gold border border-brand-gold/30 px-2 py-1 rounded text-xs font-bold">
-                    #${res.drawNumber}
+                    #${res.draw_number}
                 </div>
             </div>
             
             <div class="flex items-center gap-2 text-sm text-slate-400 mb-6 w-full pb-4 border-b border-white/5">
                 <i class="fa-regular fa-calendar text-brand-gold"></i>
-                <span class="font-medium">${res.drawDate}</span>
+                <span class="font-medium">${res.draw_date}</span>
             </div>
             
             <div class="flex flex-wrap items-center justify-center gap-3 px-4 py-6 bg-brand-dark/60 rounded-xl border border-white/5 w-full shadow-inner">
@@ -252,6 +258,7 @@ function renderResults() {
 function toggleCart() {
     const drawer = document.getElementById('cart-drawer');
     const overlay = document.getElementById('cart-overlay');
+    if(!drawer || !overlay) return;
     
     if (drawer.classList.contains('translate-x-full')) {
         drawer.classList.remove('translate-x-full');
@@ -262,11 +269,11 @@ function toggleCart() {
     }
 }
 
-function addToCart(ticketId) {
-    const ticket = allTickets.find(t => t.id === ticketId);
+function addToCart(lotteryName, ticketNumber) {
+    const ticket = allTickets.find(t => t.lottery_name === lotteryName && t.ticket_number === ticketNumber);
     if (!ticket) return;
 
-    if (cart.some(item => item.id === ticket.id)) {
+    if (cart.some(item => item.lottery_name === ticket.lottery_name && item.ticket_number === ticket.ticket_number)) {
         showToast("Ticket is already in the cart!");
         return;
     }
@@ -276,15 +283,16 @@ function addToCart(ticketId) {
     updateCartUI();
     showToast("Added to cart!");
     
-    // Animate badge
     const badge = document.getElementById('cart-badge');
-    badge.classList.remove('badge-pop');
-    void badge.offsetWidth; // trigger reflow
-    badge.classList.add('badge-pop');
+    if(badge) {
+        badge.classList.remove('badge-pop');
+        void badge.offsetWidth; 
+        badge.classList.add('badge-pop');
+    }
 }
 
-function removeFromCart(ticketId) {
-    cart = cart.filter(t => t.id !== ticketId);
+function removeFromCart(lotteryName, ticketNumber) {
+    cart = cart.filter(t => !(t.lottery_name === lotteryName && t.ticket_number === ticketNumber));
     saveCart();
     updateCartUI();
 }
@@ -293,21 +301,22 @@ function updateCartUI() {
     const container = document.getElementById('cart-items');
     const badge = document.getElementById('cart-badge');
     const checkoutBtn = document.getElementById('checkout-btn');
+    if(!container) return;
     
-    // Update Counts & Price
     const totalQty = cart.length;
     const totalPrice = totalQty * TICKET_PRICE;
     
-    document.getElementById('cart-qty').innerText = totalQty;
-    document.getElementById('cart-total').innerText = totalPrice;
+    const qtyElem = document.getElementById('cart-qty');
+    const totalElem = document.getElementById('cart-total');
+    if(qtyElem) qtyElem.innerText = totalQty;
+    if(totalElem) totalElem.innerText = totalPrice;
     
     if (totalQty > 0) {
-        badge.innerText = totalQty;
-        badge.classList.remove('scale-0');
-        checkoutBtn.disabled = false;
+        if(badge) { badge.innerText = totalQty; badge.classList.remove('scale-0'); }
+        if(checkoutBtn) checkoutBtn.disabled = false;
     } else {
-        badge.classList.add('scale-0');
-        checkoutBtn.disabled = true;
+        if(badge) badge.classList.add('scale-0');
+        if(checkoutBtn) checkoutBtn.disabled = true;
     }
 
     if (cart.length === 0) {
@@ -331,12 +340,12 @@ function updateCartUI() {
         div.className = "flex items-center justify-between p-4 bg-brand-dark/40 border border-white/5 rounded-xl hover:bg-white/5 hover:border-white/10 transition-all shadow-sm";
         div.innerHTML = `
             <div>
-                <div class="font-bold text-white text-sm tracking-wide uppercase">${item.lotteryName}</div>
-                <div class="text-sm text-brand-gold font-bold font-mono tracking-widest mt-1">${item.ticketNumber}</div>
+                <div class="font-bold text-white text-sm tracking-wide uppercase">${item.lottery_name}</div>
+                <div class="text-sm text-brand-gold font-bold font-mono tracking-widest mt-1">${item.ticket_number}</div>
             </div>
             <div class="flex items-center gap-4">
                 <div class="text-sm font-bold text-slate-200 bg-slate-800 px-2 py-1 rounded">Rs.${TICKET_PRICE}</div>
-                <button onclick="removeFromCart('${item.id}')" class="text-slate-500 hover:text-red-400 hover:bg-red-400/10 p-2 rounded-lg transition-colors">
+                <button onclick="removeFromCart('${item.lottery_name}', '${item.ticket_number}')" class="text-slate-500 hover:text-red-400 hover:bg-red-400/10 p-2 rounded-lg transition-colors">
                     <i class="fa-solid fa-trash-can"></i>
                 </button>
             </div>
@@ -368,7 +377,7 @@ function checkout() {
     let message = `*Hello, I need these tickets:*\n\n`;
     
     cart.forEach((item, index) => {
-        message += `${index + 1}. *${item.lotteryName}* - ${item.ticketNumber}\n`;
+        message += `${index + 1}. *${item.lottery_name}* - ${item.ticket_number}\n`;
     });
     
     const totalPrice = cart.length * TICKET_PRICE;
@@ -390,6 +399,7 @@ function checkout() {
 // --- UTILS ---
 function showToast(msg) {
     const toast = document.getElementById('toast');
+    if(!toast) return;
     document.getElementById('toast-msg').innerText = msg;
     toast.classList.remove('translate-y-[200%]');
     setTimeout(() => {
