@@ -1,338 +1,338 @@
 [
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Ada Kotipathi",
+        "draw_date": "2026.03.11",
+        "draw_number": "1500",
+        "ticket_number": "123001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Ada Kotipathi",
+        "draw_date": "2026.03.11",
+        "draw_number": "1500",
+        "ticket_number": "123002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Ada Kotipathi",
+        "draw_date": "2026.03.11",
+        "draw_number": "1500",
+        "ticket_number": "123003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Shanida",
+        "draw_date": "2026.03.11",
+        "draw_number": "1200",
+        "ticket_number": "124001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Shanida",
+        "draw_date": "2026.03.11",
+        "draw_number": "1200",
+        "ticket_number": "124002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Shanida",
+        "draw_date": "2026.03.11",
+        "draw_number": "1200",
+        "ticket_number": "124003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Lagna Wasana",
+        "draw_date": "2026.03.11",
+        "draw_number": "3400",
+        "ticket_number": "125001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Lagna Wasana",
+        "draw_date": "2026.03.11",
+        "draw_number": "3400",
+        "ticket_number": "125002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Lagna Wasana",
+        "draw_date": "2026.03.11",
+        "draw_number": "3400",
+        "ticket_number": "125003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Supiri Dhana Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "800",
+        "ticket_number": "126001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Supiri Dhana Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "800",
+        "ticket_number": "126002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Supiri Dhana Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "800",
+        "ticket_number": "126003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Super Ball",
+        "draw_date": "2026.03.11",
+        "draw_number": "900",
+        "ticket_number": "127001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Super Ball",
+        "draw_date": "2026.03.11",
+        "draw_number": "900",
+        "ticket_number": "127002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Super Ball",
+        "draw_date": "2026.03.11",
+        "draw_number": "900",
+        "ticket_number": "127003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Kapruka",
+        "draw_date": "2026.03.11",
+        "draw_number": "1100",
+        "ticket_number": "128001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Kapruka",
+        "draw_date": "2026.03.11",
+        "draw_number": "1100",
+        "ticket_number": "128002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Kapruka",
+        "draw_date": "2026.03.11",
+        "draw_number": "1100",
+        "ticket_number": "128003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Sasiri",
+        "draw_date": "2026.03.11",
+        "draw_number": "1300",
+        "ticket_number": "129001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Sasiri",
+        "draw_date": "2026.03.11",
+        "draw_number": "1300",
+        "ticket_number": "129002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Sasiri",
+        "draw_date": "2026.03.11",
+        "draw_number": "1300",
+        "ticket_number": "129003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Jaya Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "2100",
+        "ticket_number": "130001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Jaya Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "2100",
+        "ticket_number": "130002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Jaya Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "2100",
+        "ticket_number": "130003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Mahajana Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "6130",
+        "ticket_number": "131001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Mahajana Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "6130",
+        "ticket_number": "131002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Mahajana Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "6130",
+        "ticket_number": "131003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Govisetha",
+        "draw_date": "2026.03.11",
+        "draw_number": "4372",
+        "ticket_number": "132001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Govisetha",
+        "draw_date": "2026.03.11",
+        "draw_number": "4372",
+        "ticket_number": "132002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Govisetha",
+        "draw_date": "2026.03.11",
+        "draw_number": "4372",
+        "ticket_number": "132003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Suba Dawasak",
+        "draw_date": "2026.03.11",
+        "draw_number": "1400",
+        "ticket_number": "133001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Suba Dawasak",
+        "draw_date": "2026.03.11",
+        "draw_number": "1400",
+        "ticket_number": "133002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Suba Dawasak",
+        "draw_date": "2026.03.11",
+        "draw_number": "1400",
+        "ticket_number": "133003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Dhana Nidhanaya",
+        "draw_date": "2026.03.11",
+        "draw_number": "1500",
+        "ticket_number": "134001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Dhana Nidhanaya",
+        "draw_date": "2026.03.11",
+        "draw_number": "1500",
+        "ticket_number": "134002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Dhana Nidhanaya",
+        "draw_date": "2026.03.11",
+        "draw_number": "1500",
+        "ticket_number": "134003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Mega Power",
+        "draw_date": "2026.03.11",
+        "draw_number": "1600",
+        "ticket_number": "135001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Mega Power",
+        "draw_date": "2026.03.11",
+        "draw_number": "1600",
+        "ticket_number": "135002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Mega Power",
+        "draw_date": "2026.03.11",
+        "draw_number": "1600",
+        "ticket_number": "135003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Handahana",
+        "draw_date": "2026.03.11",
+        "draw_number": "1700",
+        "ticket_number": "136001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Handahana",
+        "draw_date": "2026.03.11",
+        "draw_number": "1700",
+        "ticket_number": "136002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Handahana",
+        "draw_date": "2026.03.11",
+        "draw_number": "1700",
+        "ticket_number": "136003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Ada Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "1800",
+        "ticket_number": "137001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Ada Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "1800",
+        "ticket_number": "137002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "Ada Sampatha",
+        "draw_date": "2026.03.11",
+        "draw_number": "1800",
+        "ticket_number": "137003",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "NLB Jaya",
+        "draw_date": "2026.03.11",
+        "draw_number": "1900",
+        "ticket_number": "138001",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "NLB Jaya",
+        "draw_date": "2026.03.11",
+        "draw_number": "1900",
+        "ticket_number": "138002",
+        "price": "40"
     },
     {
-        "id": "",
-        "lotteryName": "",
-        "drawDate": "",
-        "drawNumber": "",
-        "ticketNumber": ""
+        "lottery_name": "NLB Jaya",
+        "draw_date": "2026.03.11",
+        "draw_number": "1900",
+        "ticket_number": "138003",
+        "price": "40"
     }
 ]
